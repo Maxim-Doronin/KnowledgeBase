@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws.knowledge.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.knowledge.com/">
+
+<xs:element name="addFile" type="tns:addFile"/>
+
+<xs:element name="addFileResponse" type="tns:addFileResponse"/>
+
+<xs:element name="addNewRecord" type="tns:addNewRecord"/>
+
+<xs:element name="addNewRecordResponse" type="tns:addNewRecordResponse"/>
+
+<xs:element name="addTag" type="tns:addTag"/>
+
+<xs:element name="addTagResponse" type="tns:addTagResponse"/>
+
+<xs:element name="createTag" type="tns:createTag"/>
+
+<xs:element name="createTagResponse" type="tns:createTagResponse"/>
+
+<xs:element name="getFile" type="tns:getFile"/>
+
+<xs:element name="getFileResponse" type="tns:getFileResponse"/>
+
+<xs:element name="getRecordMap" type="tns:getRecordMap"/>
+
+<xs:element name="getRecordMapResponse" type="tns:getRecordMapResponse"/>
+
+<xs:element name="getTagMap" type="tns:getTagMap"/>
+
+<xs:element name="getTagMapResponse" type="tns:getTagMapResponse"/>
+
+<xs:element name="getTaggedRecords" type="tns:getTaggedRecords"/>
+
+<xs:element name="getTaggedRecordsResponse" type="tns:getTaggedRecordsResponse"/>
+
+<xs:element name="removeTag" type="tns:removeTag"/>
+
+<xs:element name="removeTagResponse" type="tns:removeTagResponse"/>
+
+<xs:element name="sayHello" type="tns:sayHello"/>
+
+<xs:element name="sayHelloResponse" type="tns:sayHelloResponse"/>
+
+<xs:complexType name="getRecordMap">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getRecordMapResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTaggedRecords">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTaggedRecordsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sayHello">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sayHelloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createTag">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createTagResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNewRecord">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNewRecordResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeTag">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeTagResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTagMap">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTagMapResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getFile">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getFileResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addTag">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addTagResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="addFile">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addFileResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
